@@ -1,1 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="refresh" content="5;url=https://example.com/">
+  <style>
+    body{font-family:system-ui;display:flex;height:100vh;align-items:center;justify-content:center;flex-direction:column}
+    .card{padding:20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Aap ko redirect kiya ja raha hai...</h2>
+    <p id="count">5</p>
+    <p>Agar page khul na raha ho to <a href="https://example.com/">yahaan click karo</a>.</p>
+  </div>
+  <script>
+    let t=5;const el=document.getElementById('count');const target='https://example.com/';
+    const timer=setInterval(()=>{t--;el.textContent=t;if(t<=0){clearInterval(timer);location.href=target;}},1000);
+  </script>
+</body>
+</html>
 
